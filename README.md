@@ -13,3 +13,6 @@ My website allows for individuals to search for various UFO sightings in a myria
 Here are the five search fields which can be filled in by any user. If a field is not filled in, then my code filters without that criteria.
 
 ![Five Filters](Resources/five_filters.png)
+
+## Summary
+One drawback to this new design of the table is that there is no "reset" button for the search fields. Rather, the user's only way of clearing the search fields is to refresh the entire page. Though, in theory it takes the same amount of steps to do this, in practice, a "reset" button feels more useful and appropriate than expecting the user to refresh the entire webpage. In terms of future development of this webpage, I'd suggest we display a functioning "reset" button for the search fields. Furthermore, I believe having filters on the columns of the tables that users could interact with would allow for more vibrant ways of visualizing the UFO sighting data. For instance, a user could sort by state, to see which states seemingly have the most sightings. Connections could be more easily drawn among sightings if the table was sorted this way. If sorted by shape, also, then connections might be more easily made by users on this page by seeing a similarly shaped object described by multiple parties in multiple sightings.
