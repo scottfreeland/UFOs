@@ -97,8 +97,8 @@ function updateFilters() {
   
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
-    for (var row in filters) {
-      if (filters.includes(row)) {filteredData = filteredData.filter(row => row.datetime === date);};
+    for (var i in filters) {
+      filteredData = filteredData.filter(row => row[i] === filters[i])
     }
     // 10. Finally, rebuild the table using the filtered data
     buildTable(filteredData);
