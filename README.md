@@ -1,7 +1,7 @@
 # UFOs
 
 ## Project Overview
-This analysis seeks to provide the capability to read through various recorded UFO sightings from across the world. Using JavaScript's visual functionality, we are able to display the data as a table. Furthermore, my code provides a means of sifting through the data by way of being able to manipulate the data with filters. Additionally, my website can host articles about UFO sightings on a tidy HTML page, holding both the article and the manipulatable data table.
+This webpage seeks to provide the capability to read through various recorded UFO sightings from across the world. Using JavaScript's visual functionality, we are able to display the data as a table. Furthermore, my code provides a means of sifting throughout the data by way of being able to manipulate the data with filters. Additionally, my website can host articles about UFO sightings on a tidy HTML page, holding both the article and the manipulatable data table.
 
 ## Resources
 - Data sources: data.js
