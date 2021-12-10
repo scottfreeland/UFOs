@@ -28,67 +28,31 @@ var filters = {};
 // Use this function to update the filters. 
 function updateFilters() {
     // Save the element that was changed as a variable.
-    let changedDate = d3.select("#datetime");
-    let changedCity = d3.select("#city");
-    let changedState = d3.select("#state");
-    let changedCountry = d3.select("#country");
-    let changedShape = d3.select("#shape");
+    function updateOneFilter(filterID) {
+      let changedValue = d3.select(filterID)
+
     // Save the value that was changed as a variable.
-    let dateValue = changedDate.property("value");
-    console.log(dateValue);
-    let cityValue = changedCity.property("value");
-    console.log(cityValue);
-    let stateValue = changedState.property("value");
-    console.log(stateValue);
-    let countryValue = changedCountry.property("value");
-    console.log(countryValue);
-    let shapeValue = changedShape.property("value");
-    console.log(shapeValue);
+      let propertyValue = changedValue.property("value");
+      console.log(propertyValue);
     // Save the id of the filter that was changed as a variable.
-    let dateID = changedDate.attr("id");
-    console.log(dateID);
-    let cityID = changedCity.attr("id");
-    console.log(cityID);
-    let stateID = changedState.attr("id");
-    console.log(stateID);
-    let countryID = changedCountry.attr("id");
-    console.log(countryID);
-    let shapeID = changedShape.attr("id");
-    console.log(shapeID);
-    // If a filter value was entered then add that filterId and value
-    // to the filters list. Otherwise, clear that filter from the filters object.
-    if (dateValue) {
-      filters[dateID] = dateValue;
+      let valueID = changedValue.attr("id");
+      console.log(valueID);
+
+    if (propertyValue) {
+      filters[valueID] = propertyValue;
     }
     else {
-      delete filters[dateID];
+      delete filters[valueID];
     }
-    if (cityValue) {
-      filters[cityID] = cityValue;
-    }
-    else {
-      delete filters[cityID];
-    }
-    if (stateValue) {
-      filters[stateID] = stateValue;
-    }
-    else {
-      delete filters[stateID];
-    }
-    if (countryValue) {
-      filters[countryID] = countryValue;
-    }
-    else {
-      delete filters[countryID];
-    }
-    if (shapeValue) {
-      filters[shapeID] = shapeValue;
-    }
-    else {
-      delete filters[shapeID];
-    }
-    // Call function to apply all filters and rebuild the table
-    filterTable();
+  }
+  updateOneFilter("#datetime")
+  updateOneFilter("#city")
+  updateOneFilter("#state")
+  updateOneFilter("#country")
+  updateOneFilter("#shape")
+
+  // Call function to apply all filters and rebuild the table
+  filterTable();
   }
   // Use this function to filter the table when data is entered.
   function filterTable() {
